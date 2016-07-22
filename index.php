@@ -174,7 +174,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $email = test_input($_POST["email"]);
   $message = test_input($_POST["message"]);
     // processes input into database
-    // Insert the new pokemon into the table
+   
     try {
         $stmt = $db->prepare('INSERT INTO user (name, city, email, message)
                               VALUES (:name, :city, :email, :message)');
@@ -200,7 +200,7 @@ function test_input($data) {
 }
 ?>
 
-<h2>PHP Form Validation Example</h2>
+<h2>Contact Form</h2>
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">  
   Name: <input type="text" name="name">
   <br><br>
